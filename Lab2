@@ -1,0 +1,36 @@
+def Lab2():
+    '''Функція для лабораторної №2'''
+    print('Включається лабораторна №2')
+    list_text = []
+    f = input('Виберіть A (упорядкувати слова в алфавітному порядку) або B (скільки букв у тексті) >> ')
+    alphabet = 'abcdefghijklmnopqrstuvwxyzабвгдеєжзиіїйклмнопрстуфхцчшщьюя'
+    if f.upper() == 'A' or f.upper() == 'А':
+        text = input('Введіть текст >> ').lower().split()
+        print('Слова в алфавітному порядку:')
+        for i in text:
+            if (i not in list_text) and len(i) > 2:
+                list_text.append(i)
+        list_text.sort()
+        for x in range(0, len(list_text)):
+            print(list_text[x])
+    elif f.upper() == 'B' or f.upper() == 'Б':
+        text = input('Введіть текст >> ').lower().split()
+        print('Кількість букв у тексті:')
+        for x in range(len(alphabet)):
+            num = 0
+            for i in text:
+                num = num + i.count(alphabet[x])
+            if num > 0:
+                print(alphabet[x] + ': ' + str(num))
+    else:
+        print('Можна вибрати лише A або B!')
+    print('==============================END====================================')
+l = input('Включити лабораторну №2?\nНатисніть enter/no: ')
+if l.lower() == 'y' or l.lower() == 'т' or l.lower() == 'yes' or l.lower() == 'так' or l == '' \
+                                                '':
+    Lab2()
+elif l == ' ':
+    print('Вітаємо')
+    Lab2()
+else:
+    print('Good bye')
