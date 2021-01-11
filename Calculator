@@ -1,0 +1,30 @@
+print('Калькулятор')
+p = '' \
+    ''
+while p == '' \
+           '':
+    try:
+        num1 = float(input('Введіть перше число: '))
+    except ValueError:
+        print('Введіть число!')
+        break
+    oper = input('Введіть арифметичний знак: ')
+    try:
+        num2 = float(input('Введіть друге число: '))
+    except ValueError:
+        print('Введіть число!')
+        break
+    if oper == '+':
+        print(num1 + num2)
+    elif oper == '-':
+        print(num1 - num2)
+    elif oper == '*':
+        print(num1 * num2)
+    elif oper == '/':
+        if num2 == 0:
+            print('На нуль ділити не можна!')
+        else:
+            print(num1 / num2)
+    else:
+        print('Не зрозумілий знак. Не можливо виконати програму!')
+    p = input('Нажміть "enter", щоб продовжити або іншу будь-яку клавішу щоб припинити ')
