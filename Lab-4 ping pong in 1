@@ -136,27 +136,16 @@ while True:
         paddle2.sety(260)
     if paddle2.ycor() < -260:
         paddle2.sety(-260)
-#   if score_a == 5:
-        #pen.clear()
-        #pen.goto(0,0)
-        #ball.dx = 0
-        #ball.dy = 0
-        #pen.write("Player A Won!", align="center",font=("Courier", 26,"normal"))
-#    if score_a == 5:
-        #pen.clear()
-        #pen.goto(0,20) #Воно якогось хріна блимає, бо це цикл, мені виправляти влом
-        #all.dx = 0
-        #ball.dy = 0
-        #pen.write("Player B Won!", align="center",font=("Courier", 26,"normal"))
-
-
-
-
-
-
-
-
-
+    if score_a == 5:
+       pen.goto(0,0)
+       ball.dx = 0
+       ball.dy = 0
+       pen.write("Player A Won!", align="center",font=("Courier", 26,"normal"))
+    elif score_b == 5:
+       pen.goto(0,20)
+       ball.dx = 0
+       ball.dy = 0
+       pen.write("Player B Won!", align="center",font=("Courier", 26,"normal"))
 
 
 
